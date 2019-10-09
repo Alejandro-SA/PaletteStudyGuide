@@ -1,0 +1,66 @@
+// COLOR PALETTE
+$PColor:#AEAE47;
+$SColor1:#663399;
+$SColor2:#CD4A95;
+$SColor3:#F6A123;
+
+$BgroundColor-L:#D9D9D9;
+$BgroundColor-D:#000000;
+
+@import "linealChannelTable.scss";
+
+
+body{
+  margin:0px;
+  padding: 0px;
+}
+
+.container-unlimited-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card{
+  display: block;
+  border-radius: 0.3em;
+  &.palette{
+    width: 5em;
+    height: 5em;
+    &.p{
+      background-color: $PColor;
+    }
+    &.s1{
+      background-color: $SColor1;
+    }
+    &.s2{
+      background-color: $SColor2;
+    }
+    &.s3{
+      background-color: $SColor3;
+    }
+  }
+}
+.center{
+  text-align: center;
+}
+.container-flex{
+  display: flex;
+    &.vertical-flex{
+      flex-direction: column;
+    } 
+    &.center{
+      align-items: center;
+    }
+}
+
+#palette{
+    background-color: $BgroundColor-L;
+  .header{
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: $SColor1;
+    color: choose-contrast-color($SColor1)
+  }
+}
+
